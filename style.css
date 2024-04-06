@@ -1,9 +1,121 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #000; 
-  color: #fff; 
+  background-color: #000;
+  color: #fff;
   margin: 0;
   padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .links li {
+  list-style: none;
+}
+
+.navbar .links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .links li a:hover {
+  color: orange;
+}
+
+.navbar .action_btn {
+  background-color: orange;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar .action_btn:hover {
+  transform: scale(1.05);
+}
+
+.navbar .action_btn:active {
+  transform: scale(0.95);
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  justify-content: center;
+  width: 202%;
+}
+
+section#hero {
+  height: calc(70vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
 }
 
 .container {
@@ -45,19 +157,18 @@ body {
   flex-grow: 1;
   padding: 20px;
   background-color: #fff;
-  color: #000; 
+  color: #000;
 }
 
 .main-content h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: orange; 
+  color: orange;
 }
 
 .content-section {
   margin-bottom: 40px;
 }
-
 
 @media (max-width: 768px) {
   .container {
@@ -71,11 +182,12 @@ body {
   .sidebar ul li a {
     font-size: 14px;
   }
-  
+
   .content-section {
     padding: 10px;
   }
 }
+
 .footer {
   background-color: #333;
   color: #fff;

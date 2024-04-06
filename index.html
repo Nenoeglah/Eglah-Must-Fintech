@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P2P Investment/Loan Management System</title>
-<link rel="stylesheet" href="style.css"> 
-<style>
-  body {
-    background-image: url('https://i.pinimg.com/564x/dd/81/79/dd817909a1fd7f3469b97ee2f01abee0.jpg');
-    background-size: cover; 
-  }
-</style>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/564x/dd/81/79/dd817909a1fd7f3469b97ee2f01abee0.jpg');
+            background-size: cover;
+        }
+    </style>
+    <title>P2P Investment/Loan Management System</title>
 </head>
+
 <body>
-  <div class="container">
-  
-    <div class="sidebar">
-      <h2>Dashboard</h2>
-     
-      <ul>
-        <li><a href="#info-management">Information Management</a></li>
-        <li><a href="#investment-type">Investment Type Management</a></li>
-        <li><a href="#deposit-withdrawal">Check Deposit/Withdrawal Details</a></li>
-        <li><a href="#sales-history">Sales History Inquiry</a></li>
-        <li><a href="#investment-details">Investment Details Inquiry</a></li>
-        <li><a href="#bond-details">View Bond Details</a></li>
-        <li><a href="#sms-management">SMS Management</a></li>
-        <li><a href="#consultation-history">Consultation History Management</a></li>
-        <li><a href="#1-1-inquiry">1:1 Inquiry History Inquiry</a></li>
-      </ul>
+
+    <div class="navbar">
+        <div class="logo"><a href="#">P2P Investment/Loan Management System</a></div>
+
+        
+
+        
+        </div>
+      </div>
     </div>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p>
+              P2P Investment/<br /> Loan Management System.
+            </p>
+        </section>
+        
+
+        <div class="container">
+            <div class="sidebar">
+              
+              
+                <h2>Dashboard</h2>
+
+                <ul>
+                    <li><a href="#info-management">Information Management</a></li>
+                    <li><a href="#investment-type">Investment Type Management</a></li>
+                    <li><a href="#deposit-withdrawal">Check Deposit/Withdrawal Details</a></li>
+                    <li><a href="#sales-history">Sales History Inquiry</a></li>
+                    <li><a href="#investment-details">Investment Details Inquiry</a></li>
+                    <li><a href="#bond-details">View Bond Details</a></li>
+                    <li><a href="#sms-management">SMS Management</a></li>
+                    <li><a href="#consultation-history">Consultation History Management</a></li>
+                    <li><a href="#1-1-inquiry">1:1 Inquiry History Inquiry</a></li>
+                </ul>
+            </div>
 
    
     <div class="main-content">
@@ -389,6 +412,25 @@
       });
     });
   </script>
+  
+  </main>
+
+  <script>
+      const servicesLink = document.getElementById('services-link');
+      const dashboardSection = document.getElementById('dashboard');
+      const infoManagementSection = document.getElementById('info-management');
+      
+     
+      servicesLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          dashboardSection.classList.remove('hidden');
+          infoManagementSection.classList.add('hidden');
+          
+      });
+  </script>
+  
+  
 
 </section>
 </div>
